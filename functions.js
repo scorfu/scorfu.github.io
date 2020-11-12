@@ -3,30 +3,29 @@ function hide(id){
    document.getElementById(id).style.display = "none";
 }
 
-function showHome(){
+function hideAllPages() {
+    hide('home')
     hide("skills")
     hide("projects")
     hide("languages")
+}
+
+function showHome(){
+    hideAllPages();
     document.getElementById('home').style.display = '';  
 }
 
 function showSkills(){
-    hide("home")
-    hide("projects")
-    hide("languages")
+    hideAllPages();
     document.getElementById('skills').style.display = "";  
 }
 
  function showProjects(){
-    hide("home")
-    hide("skills")
-    hide("languages")
+    hideAllPages();
     document.getElementById('projects').style.display = "";
 }
 function showLanguages(){
-    hide("home")
-    hide("skills")
-    hide('projects')
+    hideAllPages();
     // document.getElementById('home').style.display = 'none';
     // document.getElementById("skills").style.display = "none";
     // document.getElementById("projects").style.display = "none";
