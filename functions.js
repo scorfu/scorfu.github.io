@@ -1,24 +1,19 @@
-function hide(id){
-   console.info("hide:" + id);
-   document.getElementById(id).style.display = "none";
+function hide(id) {
+    var el = document.getElementById(id);
+    if (el) {
+        el.style.display = "none";
+    } else {
+        console.error("elementul nu exista");
+    }
 }
 
- function hideAllPages() {
-     hide('home')
-     hide("skills")
-     hide("projects")
-     hide("languages")
-
-    // var pages= document.querySelectorAll(".page");
-    // // for (intitializare; conditie; post executie)
-    // for (var i = 0; i < pages.length; i++) {
-    //     var id = pages[i].id
-    //     console.info("i=", i, pages[i]);
-    //     hide(id)
-    // }
-        
+function hideAllPages() {
+    var pages = document.querySelectorAll(".page");
+    for(var i = 0; i < pages.length; i++) {
+        var page = pages[i];
+        var id = page.id;
+        hide(id);
     }
-
 }
 
 function showHome(){

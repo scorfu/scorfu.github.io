@@ -13,8 +13,18 @@
                 padding: 4px;
                 border: 2px solid green;
             }   */
+            @font-face {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400 900;
+                font-display: swap;
+                src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+              }
+
             html {
                 height: 100%;
+                
             }
 
             body {
@@ -22,6 +32,7 @@
                 min-height: 100%;
                 display: flex;
                 flex-direction: column;
+                font-family: 'Roboto', sans-serif;
             }
             header, body > section {
                 flex: 1;
@@ -47,12 +58,43 @@
                 min-height: 20px;
                 text-align: center;
                 padding: 10px;
-                background-color: black;
-                color: white;
-                /*: flex;
-                align-items: flex-end;*/
+                background-color: #334455;
+                color: whitesmoke;
+                font-weight: 900;
+                display: grid;
+                grid-template-areas: 'linkedin or fun';
             }
 
+            .linkedin {
+                justify-self: end;
+            }
+            .or {
+                justify-self: center;
+            }
+            .fun {
+                justify-self: start;
+            }
+/* links from footer start */
+            /* unvisited link */
+            a:link {
+                color: rgb(128, 105, 0);
+            }
+            
+            /* visited link */
+            a:visited {
+                color: rgba(128, 105, 0, 0.5);
+            }
+            
+            /* mouse over link */
+            a:hover {
+                color: burlywood;
+            }
+            
+            /* selected link */
+            a:active {
+                color: white;
+            }
+/* links from footer end */
 
 
 
@@ -63,7 +105,7 @@ body
 {background-color: #f5f5f5;}
 
 #job-title {
-    color: rgb(75, 13, 138); 
+    color: rgba(128, 105, 0, 1); 
     text-align: right;
 }
 
