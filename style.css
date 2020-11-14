@@ -63,6 +63,7 @@
                 font-weight: 900;
                 display: grid;
                 grid-template-areas: 'linkedin or fun';
+                
             }
 
             .linkedin {
