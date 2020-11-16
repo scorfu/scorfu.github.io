@@ -22,15 +22,23 @@ function showPage(pageId){
 }
 
 function initMenu() {
-    console.warn('prepare click on links');
     document.addEventListener('click', function(e){
         var link = e.target
         if (link.matches('#top-menu-bar a')) {
             var id = link.innerHTML.toLowerCase();
-            console.info('click', id);
             showPage(id);
         }
     })
 }
 
 initMenu();
+
+showPage('skills');
+
+var skills = ['HTML', 'CSS', 'JavaScript']
+
+//TODO add 'favorite' skill
+var ul = document.querySelector('#skills ul')
+ul.innerHTML = '<li>' + skills [0] + '</li>' + 
+               '<li>' + skills [1] + '</li>' + 
+               '<li>' + skills [2] + '</li>';
