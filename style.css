@@ -157,8 +157,7 @@ body
 }
 
 .favorite {
-    color: rgb(0, 0, 0);
     background-color: rgba(128, 105, 0 , 0.5);
-    font-style: italic;
+    font-style: bold;
 }
 
