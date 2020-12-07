@@ -25,7 +25,7 @@ function showPage(pageId){
 }
 
 function initMenu() {
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', e => {
         const link = e.target
         if (link.matches('#top-menu-bar a')) {
             const id = link.getAttribute('data-page');
@@ -53,7 +53,7 @@ function showSkills (skills) {
 }
 
 
-fetch("data/skills.json").then( (r) => {
+fetch("data/skills.json").then(r => {
     return r.json();
 }).then( (allSkills) => {
     allSkills.sort( (s1, s2) => {
